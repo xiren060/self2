@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+      body{
+          margin: 0;
+          height: 100vh;
+          background-color: #eee;
+
+      }
+      /**{
+          border: 1px solid;
+      }*/
+
+      .flex{
+          display: flex;
+      }
+      .baise{
+          background-color: white;
+      }
+      .lanse{
+        background-color: rgb(195, 248, 248);
+      }
+      .flex1{
+          flex: 1;
+      }
+      .column{
+          flex-direction: column;
+      }
+      .mg8{
+        margin: 5px;
+        border-radius:25px;
+        box-shadow: 1px 2px 2px #d3c7c7;
+    }
+   
+    .text{
+        margin-left: 5%;
+        color: rgb(71, 158, 158);
+    }
+    .daohang{
+        padding: 10px 15px;
+        border: 1px solid rgb(217, 159, 159);
+        font-size: 14px;
+        color: #666;
+    }
+    .zhuangtai{
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    @media (max-width:600px) {
+        .cebian{
+            display: none;
+        }
+        .neirong{
+            flex-direction: column;
+        }
+        .shuju{
+            flex-direction: column;
+        }
+        .you{
+            margin-left: 8px;
+        }
+        .shujukuai{
+            margin: 0 0 8px;
+            flex: auto;
+        }
+    }
+    </style>
+  </head>
+
+
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width:180px;z-index: 2;border-bottom: 1px solid rgb(0, 0, 0);" class="cebian baise mg8">
+        <!-- 信息 -->
+        <div class="flex">
+        <img style="height: 50px;" class="mg8" src="https://s1.ax1x.com/2022/07/15/jh5PzT.jpg" alt="">
+        <div style="margin: 10px; padding: 10px">xiren060</div>
+    </div>
+        <!-- 类别 -->
+        <div class="flex1">
+            <div class="daohang">Java</div>
+            <div class="daohang">C++</div>
+            <div class="daohang">THML</div>
+        </div>
+        <!-- 状态 -->
+        <div style="position:fixed;bottom: 0;"class="zhuangtai">初学者</div>
+    </div>
+    <!--主区域-->
+    <div class=" flex flex1 column">
+        <!-- 顶部 -->
+        <div style="height: 60px;z-index: 1;" class="flex mg8 lanse"></div>
+        <!-- 内容区 -->
+        <div style="overflow: auto;" class="neirong flex1 flex ">
+         <!-- 左 -->
+        <div style="flex:3" class="flex column">
+            <!-- 数据区 -->
+            <div class="flex">
+                <!-- 数据块 -->
+                <div style="height: 50px;" class="shujukuai flex1 baise mg8"></div>
+                <div style="height: 50px;" class="shujukuai flex1 baise mg8"></div>
+                <div style="height: 50px;" class="shujukuai flex1 baise mg8"></div>
+                <div style="height: 50px;" class="shujukuai flex1 baise mg8"></div>
+            </div>
+            <!-- 列表区 -->
+            <div class="flex column ">
+                <!-- 列表 -->
+                <div style="height: 150px;" class="baise mg8"></div>
+                <div style="height: 150px;"class="baise mg8"></div>
+                <div style="height: 150px;"class="baise mg8"></div>
+                <div style="height: 150px;" class="baise mg8"></div>
+            </div>
+        </div>
+        <!-- 右 -->
+        <div style="flex:1" class="you flex column mg8 baise"></div>
+
+        </div>
+        
+    </div>
+
+    </div>
+  </body>
+</html>
